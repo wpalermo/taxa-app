@@ -13,7 +13,9 @@ func main() {
 	//Inicia as rotas
 	router := routers.InitRoutes()
 
+	log.Print("Test debug")
+
 	//Inicia o servidor
-	log.Fatal(http.ListenAndServe(":8085", router))
+	log.Fatal(http.ListenAndServe(":8086", router))
 
 }
