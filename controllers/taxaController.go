@@ -3,6 +3,7 @@ package controllers
 import (
 	"fmt"
 	"net/http"
+	"rf/taxa-app/services"
 )
 
 //Get busca as taxas
@@ -12,7 +13,7 @@ func Get(w http.ResponseWriter, r *http.Request) {
 
 //Post calcula a taxa de juros de acordo com a data
 func Post(w http.ResponseWriter, r *http.Request) {
-
+	services.CalcularTaxa()
 }
 
 //Put atualiza um registro

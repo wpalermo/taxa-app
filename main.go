@@ -8,6 +8,8 @@ import (
 
 func main() {
 
+	log.Print("Iniciando taxa-app")
+
 	//Inicia as rotas
 	router := routers.InitRoutes()
 
