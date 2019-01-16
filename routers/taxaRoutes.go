@@ -10,6 +10,7 @@ import (
 func SetTaxaRoutes(router *mux.Router) *mux.Router {
 
 	router.HandleFunc("/taxa", controllers.Get).Methods("GET")
+	router.HandleFunc("/taxa", controllers.Post).Methods("POST")
 
 	return router
 
