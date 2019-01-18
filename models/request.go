@@ -1,10 +1,8 @@
 package models
 
-import "time"
-
 //Request data
 type Request struct {
-	dataAgendamento   time.Time `json: "dataAgendamento"`
-	dataTransferencia time.Time `json: "dataTransferencia"`
-	valor             float32   `json: "valor"`
+	DataAgendamento   string  `json: "dataAgendamento"`
+	DataTransferencia string  `json: "dataTransferencia"`
+	Valor             float32 `json: "valor"`
 }
