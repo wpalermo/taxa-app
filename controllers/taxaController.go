@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 	"rf/taxa-app/models"
+	"rf/taxa-app/services"
+	"rf/taxa-app/util"
 )
 
 //Get busca as taxas
@@ -24,6 +26,11 @@ func Post(w http.ResponseWriter, r *http.Request) {
 	var req models.Request
 
 	json.NewDecoder(r.Body).Decode(&req)
+
+	dataAgendamentoTime := util.StringToDate(req.DataAgendamento, "02/01/2006")
+	dataTransferenciaTime := util.StringToDate(req.DataTransferencia, "02/01/2006")
+
+	services.CalcularTaxa(dataTransferenciaTime, dataAgendamentoTime, req.Valor)
 
 }
 

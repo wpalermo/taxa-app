@@ -16,6 +16,6 @@ func main() {
 	log.Print("Test debug")
 
 	//Inicia o servidor
-	log.Fatal(http.ListenAndServe(":8086", router))
+	log.Fatal(http.ListenAndServe(":8081", router))
 
 }
